@@ -1,4 +1,4 @@
-replicaCount: 2
+replicaCount: 1
 
 image:
   registry: ghcr.io
@@ -81,13 +81,13 @@ resources:
     cpu: 400m
     memory: 512Mi
   requests:
-    cpu: 200m
-    memory: 256Mi
+    cpu: 150m
+    memory: 192Mi
 
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 6
+  minReplicas: 1
+  maxReplicas: 1
   targetCPUUtilizationPercentage: 75
 
 livenessProbe:
